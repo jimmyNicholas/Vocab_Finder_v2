@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Vocab Finder</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="page-title">Vocab Finder</h1>
+      <button id="print-word-container">Print</button>
+    </header>
+    <form id="words-search-form">
+      <label for="word"> Words: </label>
+      <input id="input-words" name="input-words"></input>
+      <input type="submit" id="search-words-button" value="Search">
+    </form>
+
+    <div id="word-container" class="page">
+      <div class="word-container-header hide">
+        <h3 class="buttoned-title">Word</h3>
+        <h3 >POS</h3>
+        <h3 class="buttoned-title">Definition</h3>
+        <h3 class="buttoned-title">Example</h3>
+      </div>
+
+      <template id="word-card-template">
+        <div class="word-card">
+          <button class="previous-word previous-button">&lt</button>
+          <p class="word-text text"></p>
+          <p id="word-position" class="position-text"></p>
+          <button class="next-word next-button">&gt</button>
+          
+          <p class="pos-text"></p>
+
+          <button class="previous-definition previous-button">&lt</button>
+          <p class="definition-text text"></p>
+          <p id="definition-position" class="position-text"></p>
+          <button class="next-definition next-button">&gt</button>
+
+          <button class="previous-example previous-button">&lt</button>
+          <p class="example-text text"></p>
+          <p id="example-position" class="position-text"></p>
+          <button class="next-example next-button">&gt</button>
+        </div>
+      </template>
+  </div>
+
+  </body>
+  <head>
+    <script src="/js/index.js"></script> 
+  </head>
+</html>
+

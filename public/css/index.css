@@ -1,0 +1,89 @@
+:root {
+    --colour-a: #ffefae;
+    --colour-b: #96d1aa;
+    --colour-c: #00978d;
+    --colour-d: #007190;
+    --font-fam-a: 'Times New Roman', Times, serif;
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#print-word-container {
+    background-color: var(--colour-b);
+    width: 100px;
+    height: 50px;
+    font-size: 21px;
+    font-family: var(--font-fam-a);
+    font-weight: bold;
+}
+
+#words-search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;   
+    font-weight: bold;
+}
+
+#words-search-form > * {
+    font-size: 21px;
+    font-family: var(--font-fam-a);
+}
+
+#input-words {
+    border: 1px solid var(--colour-d);
+    min-width: 50%;
+}
+
+
+#word-container {
+    display: grid;
+    row-gap: 6px;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr repeat(2, 1fr 8fr 1fr 1fr);
+}
+
+.buttoned-title {
+    grid-column: span 4;
+}
+
+.word-container-header,
+.word-card {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    font-size: 20px;
+    font-family: var(--font-fam-a);
+}
+
+.word-container-header {
+    justify-items: center;
+    align-items: center;
+    border: 1px solid var(--colour-d);
+    background-color: var(--colour-a);
+
+}
+
+.word-card {
+    border: 1px solid var(--colour-d);
+    font-size: 17px;
+    font-family: var(--font-fam-a);
+}
+
+.word-card p {
+    place-self: center;
+    padding: 5px;
+}
+
+
+.previous-button, 
+.next-button {
+    background-color: var(--colour-b);
+}
