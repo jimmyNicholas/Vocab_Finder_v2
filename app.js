@@ -4,15 +4,15 @@
 //import { fileURLToPath } from 'url';
 //import bodyParser from 'body-parser';
 
-const express = require(express);
+const express = require('express');
 const dictController = require('./controllers/dictController.js');
 const path = require('path');
 const { fileURLToPath } = require('url');
 const bodyParser = require('body-parser');
 
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(bodyParser.json());
@@ -30,13 +30,12 @@ app.post('/getWordData', async (req, res) => {
     
 });
 
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
-modeule.exports = {
-    app,
-};
+console.log(app);
+
+module.exports = app;

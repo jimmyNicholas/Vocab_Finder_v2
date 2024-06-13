@@ -1,5 +1,5 @@
 //import config from "../config/config.js";
-const config = require('./config/config.js');
+const config = require('../config/config.js');
 const apiKey = config.apiKeys.dictionaryKey;
 
 const fetchWordData= async (word) => {
