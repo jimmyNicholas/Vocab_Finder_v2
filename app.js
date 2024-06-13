@@ -36,6 +36,4 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
-console.log(app);
-
 module.exports = app;
