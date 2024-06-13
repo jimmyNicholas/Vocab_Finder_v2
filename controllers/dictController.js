@@ -1,4 +1,5 @@
-import dictApiService from "../services/dictApiService.mjs";
+//import dictApiService from "../services/dictApiService.js";
+const dictApiService = require("../services/dictApiService.js");
 
 const getWordData = async (wordString) => {
     // prepare word array
@@ -18,7 +19,6 @@ const getWordData = async (wordString) => {
     //wordData.push('test word')
     return wordData;    
 };
-
-export default {
+module.exports = {
     getWordData,
 }

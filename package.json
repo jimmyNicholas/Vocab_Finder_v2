@@ -8,8 +8,7 @@
   "name": "vocab_finder_v2",
   "description": "A tool that helps ESL teachers quickly find information on lists of vocabulary words",
   "version": "2.0.0",
-  "main": "server.mjs",
-  "type": "module",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

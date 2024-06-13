@@ -1,10 +1,15 @@
-import express from 'express';
+//import express from 'express';
+//import dictController from './controllers/dictController.js';
+//import path from 'path';
+//import { fileURLToPath } from 'url';
+//import bodyParser from 'body-parser';
 
-import dictController from './controllers/dictController.mjs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const express = require(express);
+const dictController = require('./controllers/dictController.js');
+const path = require('path');
+const { fileURLToPath } = require('url');
+const bodyParser = require('body-parser');
 
-import bodyParser from 'body-parser';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -32,4 +37,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
-export default app;
+modeule.exports = {
+    app,
+};

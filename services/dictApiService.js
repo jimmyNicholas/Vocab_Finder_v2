@@ -1,4 +1,5 @@
-import config from "../config/config.mjs";
+//import config from "../config/config.js";
+const config = require('./config/config.js');
 const apiKey = config.apiKeys.dictionaryKey;
 
 const fetchWordData= async (word) => {
@@ -12,6 +13,6 @@ const fetchWordData= async (word) => {
     }
 };
 
-export default {
+module.exports = {
     fetchWordData,
 }
