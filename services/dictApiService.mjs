@@ -1,4 +1,4 @@
-import config from "../config/config.js";
+import config from "../config/config.mjs";
 const apiKey = config.apiKeys.dictionaryKey;
 
 const fetchWordData= async (word) => {

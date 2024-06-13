@@ -1,4 +1,4 @@
-import dictApiService from "../services/dictApiService.js";
+import dictApiService from "../services/dictApiService.mjs";
 
 const getWordData = async (wordString) => {
     // prepare word array

@@ -1,6 +1,6 @@
 import express from 'express';
 
-import dictController from './controllers/dictController.js';
+import dictController from './controllers/dictController.mjs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
