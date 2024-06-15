@@ -30,6 +30,8 @@ app.post('/getWordData', async (req, res) => {
     
 });
 
+console.log(__dirname);
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
