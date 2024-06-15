@@ -291,7 +291,7 @@ const constructIndexNav = (array) => {
   };
 
 const getWordData = async (wordString) => {
-    const url = '/getWordData';
+    const url = 'vocabfinder/getWordData';
     const options = {
         method: 'POST',
         headers: {
