@@ -3,7 +3,7 @@ const dictApiService = require("../services/dictApiService.js");
 
 const getWordData = async (wordString) => {
     // prepare word array
-    const wordList = wordString[0].split(',');
+    const wordList = wordString.split('+');
 
     //call API on each word and return an array
     const wordData = [];

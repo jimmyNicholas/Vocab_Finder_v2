@@ -19,23 +19,26 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 
-app.post('/getWordData', async (req, res) => {
-    const wordString = req.body.wordString;
+app.get('/getWordData/:words', async (req, res) => {
+    const wordString = req.params.words;
+    console.log(wordString);
     try {
         const wordData = await dictController.getWordData(wordString);
         res.status(200).send(wordData);
     } catch (error) {
         res.status(500).send({ error: 'Failed to fetch word data' });
     }
-    
 });
-
-console.log(__dirname);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Server Error');
 });
 
 module.exports = app;
