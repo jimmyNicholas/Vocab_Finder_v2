@@ -8,6 +8,7 @@
     --background-colour: #FFFFFF;
     --header-colour: #DFE3CB;
 
+    --font-label: "jost", sans-serif;
 }
 
 .hide {
@@ -19,6 +20,17 @@ header {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--header-colour);
+    font-family: var(--font-label);
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+}
+
+#page-title {
+    font-size: 40px;
 }
 
 #print-word-container {
