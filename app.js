@@ -24,6 +24,7 @@ app.get('/getWordData/:words', async (req, res) => {
     console.log(wordString);
     try {
         const wordData = await dictController.getWordData(wordString);
+        console.log(wordData);
         res.status(200).send(wordData);
     } catch (error) {
         res.status(500).send({ error: 'Failed to fetch word data' });

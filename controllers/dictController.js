@@ -10,7 +10,7 @@ const getWordData = async (wordString) => {
     const promises = wordList.map(async (word) => {
         try {
             const data = await dictApiService.fetchWordData(word);      
-            wordData.push(data)
+            wordData.push(data);
         } catch (error) {
             console.error('Dictioary Api error', error);
         }

@@ -8,16 +8,18 @@
   </head>
   <body>
     <header>
-      <h1 id="page-title">Vocab Finder</h1>
+      <div>
+        <h1 id="page-title">Vocab Finder</h1>
+        <form id="words-search-form">
+          <label for="word"> Words: </label>
+          <input id="input-words" name="input-words"></input>
+          <input type="submit" id="search-words-button" value="Search">
+          <input type="checkbox" id="test">
+          <label>Testing mode</label>
+        </form>
+      </div>
       <button id="print-word-container">Print</button>
     </header>
-    <form id="words-search-form">
-      <label for="word"> Words: </label>
-      <input id="input-words" name="input-words"></input>
-      <input type="submit" id="search-words-button" value="Search">
-      <input type="checkbox" id="test" checked>
-      <label>Testing mode</label>
-    </form>
 
     <div id="word-container" class="page">
       <div class="word-container-header hide">

@@ -4,6 +4,10 @@
     --colour-c: #00978d;
     --colour-d: #007190;
     --font-fam-a: 'Times New Roman', Times, serif;
+
+    --background-colour: #FFFFFF;
+    --header-colour: #DFE3CB;
+
 }
 
 .hide {
@@ -14,6 +18,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--header-colour);
 }
 
 #print-word-container {
