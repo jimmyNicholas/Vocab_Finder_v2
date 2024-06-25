@@ -286,7 +286,7 @@ const constructIndexNav = (array) => {
           setupNavButtons(wordCard, wordsInterface, selector, obj.direction)
         });    
       });
-  
+
       displayWord(wordCard);
       wordContainer.appendChild(wordCard);
   };
@@ -22268,6 +22268,16 @@ const getTestWord = () => {
   return testWordArray;
 };
 
+const setRowColours = () => {
+  const rows = document.querySelectorAll('.word-card');
+  rows.forEach((row, index) => {
+    if (index % 2 === 0) {
+      row.style.backgroundColor = "#E1F2FB";
+    } else {
+      row.style.backgroundColor = "#E8EBEB";
+    };
+  });
+};
 
 const setupSearchWordsButton = async () => {
     const searchWordsButton = document.querySelector("#search-words-button");
@@ -22292,6 +22302,7 @@ const setupSearchWordsButton = async () => {
                 console.log(wordsInterface);
                 displayWordCard(wordsInterface);
             });
+            setRowColours();
         } catch (error) {
             console.log(error);
         }        

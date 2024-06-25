@@ -3,57 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css">
     <title>Vocab Finder</title>
   </head>
   <body>
     <header>
-      <div>
-        <h1 id="page-title">Vocab Finder</h1>
-        <form id="words-search-form">
-          <label for="word"> Words: </label>
-          <input id="input-words" name="input-words"></input>
-          <input type="submit" id="search-words-button" value="Search">
-          <input type="checkbox" id="test">
-          <label>Testing mode</label>
-        </form>
-      </div>
-      <button id="print-word-container">Print</button>
+      <h1 id="page-title">Vocab Finder</h1>
+      <form id="words-search-form">
+        <img id="search-words-button" src="./assets/search_icon.png" alt="Search: ">
+        <input id="input-words" name="input-words"></input>
+        <!-- <input type="submit" id="search-words-button" value="Search"> -->
+        <input type="checkbox" id="test">
+        <label>Test</label>
+      </form>
+       <div id="print-container">
+        <button id="print-word-container">
+          <img src="./assets/print_icon.png">
+          Print
+        </button>
+       </div>
+
     </header>
- <!--
+ 
     <div id="word-container" class="page">
       <div class="word-container-header hide">
-        <h3 class="buttoned-title">Word</h3>
-        <h3 >POS</h3>
-        <h3 class="buttoned-title">Definition</h3>
-        <h3 class="buttoned-title">Example</h3>
+        <h3 class="buttoned-title">WORD</h3>
+        <div class="word-container-divider"></div>
+        <h3>PART OF SPEECH</h3>
+        <div class="word-container-divider"></div>
+        <h3 class="buttoned-title">DEFINITION</h3>
+        <div class="word-container-divider"></div>
+        <h3 class="buttoned-title">EXAMPLE</h3>
       </div>
-
-      <template id="word-card-template">
-        <div class="word-card">
-          <button class="previous-word previous-button">&lt</button>
-          <p class="word-text text"></p>
-          <p id="word-position" class="position-text"></p>
-          <button class="next-word next-button">&gt</button>
-          
-          <p class="pos-text"></p>
-
-          <button class="previous-definition previous-button">&lt</button>
-          <p class="definition-text text"></p>
-          <p id="definition-position" class="position-text"></p>
-          <button class="next-definition next-button">&gt</button>
-
-          <button class="previous-example previous-button">&lt</button>
-          <p class="example-text text"></p>
-          <p id="example-position" class="position-text"></p>
-          <button class="next-example next-button">&gt</button>
-        </div>
-      </template>
   </div>
--->
+
+  <template id="word-card-template">
+    <div class="word-card">
+      <img class="previous-word previous-button" src="./assets/back_icon.png" alt=&lt>
+      <p class="word-text text"></p>
+      <p id="word-position" class="position-text"></p>
+      <img class="next-word next-button" src="./assets/forward_icon.png" alt=&gt>
+
+      <div class="word-container-divider"></div>
+
+      <p class="pos-text"></p>
+
+      <div class="word-container-divider"></div>
+
+      <img class="previous-definition previous-button" src="./assets/back_icon.png" alt=&lt>
+      <p class="definition-text text"></p>
+      <p id="definition-position" class="position-text"></p>
+      <img class="next-definition next-button" src="./assets/forward_icon.png" alt=&gt>
+
+      <div class="word-container-divider"></div>
+
+      <img class="previous-example previous-button" src="./assets/back_icon.png" alt=&lt>
+      <p class="example-text text"></p>
+      <p id="example-position" class="position-text"></p>
+      <img class="next-example next-button" src="./assets/forward_icon.png" alt=&gt>
+    </div>
+  </template>
+
+
   </body>
   <head>
     <script src="./js/index.js"></script> 
+    <link rel="stylesheet" href="./css/index.css">
   </head>
 </html>
 
