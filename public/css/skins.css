@@ -42,3 +42,31 @@
 .word-info {
     font-size: 18px;
 }
+
+tr {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+
+.print-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}
+
+.print-cel {
+    border: 2px solid black;
+    padding: 8px;
+}
+
+.header-table {
+    font-family: var(--font-label);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.body-table {
+    font-family: var(--font-content);
+    font-weight: 400;
+    font-size: 18px;
+}

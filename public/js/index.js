@@ -22322,15 +22322,77 @@ const setupPrintButton = () => {
   
     const printWords = document.querySelector('#print-word-container');
     printWords.addEventListener('click', () => {
-      const pageElements = document.querySelector('body');
       const wordContainer = document.querySelector('#word-container');
-    
+      wordContainer.classList.remove('content-container');
+      addHideClass(wordContainer);
+
+      const header = document.querySelector('.header');
+      header.classList.remove('header');
+      addHideClass(header);
+      
+      const extractText = (elements) => {
+        let ret = [];
+        elements.forEach((t) => {
+          ret.push(t.textContent);
+        });
+        return ret;
+      };
+
+      const titleElements = document.querySelectorAll('.title');
+      const titles = extractText(titleElements);
+
+      const wordCards = document.querySelectorAll('.word-card');
+      let content = [];
+      wordCards.forEach((card) => {
+        const cardElements = card.querySelectorAll('.word-content');
+        content.push(extractText(cardElements));
+      });
+
+      const createTable = (titles, content) => {
+        const table = document.createElement('table');
+        table.classList.add('print-table');
+
+        const addRow = (stringArray, tableElement) => {
+          const row = tableElement.insertRow();
+          stringArray.forEach((string) => {
+            const cell = row.insertCell();
+            cell.innerHTML = string;
+            cell.classList.add('print-cel');
+          });
+        };
+
+        const tHeader = table.createTHead();
+        tHeader.classList.add('header-table');
+        addRow(titles, tHeader);
+     
+        const tBody = table.createTBody();
+        tBody.classList.add('body-table');
+        content.forEach((words) => {
+          addRow(words, tBody);
+        });
+
+        document.body.appendChild(table);
+      };
+      createTable(titles, content);
+      window.print();
+      document.querySelector('.print-table').remove();
+      
+      header.classList.add('header');
+      removeHideClass(header);
+      wordContainer.classList.add('content-container');
+      removeHideClass(wordContainer);
+      
+
+      //previous implementation
+      /*
       const positionTexts = document.querySelectorAll('.position-text');
       const previousButtons = document.querySelectorAll('.previous-button');
       const nextButtons = document.querySelectorAll('.next-button');
   
-      const wordContainerText = wordContainer.querySelectorAll('.text');
-  
+      const wordContainerText = wordContainer.querySelectorAll('.print');
+      const wordDividers = wordContainer.querySelectorAll('.word-container-divider');
+      console.log(wordDividers);
+      
       let elementArray = [];
       for (const child of pageElements.children) {
         if (child.id !== 'word-container') {
@@ -22339,21 +22401,25 @@ const setupPrintButton = () => {
           elementArray = [...elementArray, ...childElements];
         } 
       }
-  
+      
+      //console.log(wordContainerText);
+      //console.log(elementArray);
+
       [positionTexts, previousButtons, nextButtons].forEach(array => {
         array.forEach(element => addHideClass(element));
       });
       wordContainerText.forEach(text => text.classList.add('buttoned-title'));
-      elementArray.forEach(element => addHideClass(element));
+      //elementArray.forEach(element => addHideClass(element));
       
       window.print();
-  
+
       [positionTexts, previousButtons, nextButtons].forEach(array => {
         array.forEach(element => removeHideClass(element));
       });
       wordContainerText.forEach(text => text.classList.remove('buttoned-title'));
-      elementArray.forEach(element => removeHideClass(element));
-  
+      //elementArray.forEach(element => removeHideClass(element));
+      */
+      
     });
   }
 
