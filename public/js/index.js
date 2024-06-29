@@ -22279,16 +22279,17 @@ const setRowColours = () => {
   });
 };
 
-const setupSearchWordsButton = async () => {
-    const searchWordsButton = document.querySelector("#search-words-button");
-    searchWordsButton.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target.parentElement);
+const setupSearchWordsEvent = async () => {
+    const searchWordsForm = document.querySelector("#words-search-form");
+    console.log(searchWordsForm);
+    searchWordsForm.addEventListener('submit', async (e) => {
+        e.preventDefault();    
+        const formData = new FormData(e.target);        
         const formEntries = Object.fromEntries(formData);
         const wordString = Object.values(formEntries)[0].replaceAll(', ', ',').split(',').join('+');
         console.log(wordString);
         const testingModeIsOn = document.querySelector('#test').checked; 
-
+        
         try {
             let wordMeanings;
             if (testingModeIsOn) {
@@ -22305,7 +22306,7 @@ const setupSearchWordsButton = async () => {
             setRowColours();
         } catch (error) {
             console.log(error);
-        }        
+        }    
     });
   };
 
@@ -22357,6 +22358,6 @@ const setupPrintButton = () => {
   }
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupSearchWordsButton();
+    setupSearchWordsEvent();
     setupPrintButton();
 });
