@@ -6,59 +6,59 @@
     <title>Vocab Finder</title>
   </head>
   <body>
-    <header>
-      <h1 id="page-title">Vocab Finder</h1>
-      <form id="words-search-form">
-        <img id="search-words-button" src="./assets/search_icon.png" alt="Search: ">
-        <input id="input-words" name="input-words"></input>
+    <header class="header bg-secondary">
+      <h1 id="page-title" class="header-center header-title">Vocab Finder</h1>
+      <form id="words-search-form" class="header-center header-form">
+        <img id="search-words-button" class='header-img' src="./assets/search_icon.png" alt="Search: ">
+        <input id="input-words" class="header-search" name="input-words"></input>
         <!-- <input type="submit" id="search-words-button" value="Search"> -->
         <input type="checkbox" id="test">
         <label>Test</label>
       </form>
-       <div id="print-container">
-        <button id="print-word-container">
-          <img src="./assets/print_icon.png">
+       <div id="print-container" class="header-button-container">
+        <button id="print-word-container" class="header-button bg-primary">
+          <img class='header-img' src="./assets/print_icon.png">
           Print
         </button>
        </div>
 
     </header>
  
-    <div id="word-container" class="page">
-      <div class="word-container-header hide">
-        <h3 class="buttoned-title">WORD</h3>
+    <div id="word-container" class="content-container">
+      <div class="word-title word-container-header hide">
+        <h3 class="content-title">WORD</h3>
         <div class="word-container-divider"></div>
         <h3>PART OF SPEECH</h3>
         <div class="word-container-divider"></div>
-        <h3 class="buttoned-title">DEFINITION</h3>
+        <h3 class="content-title">DEFINITION</h3>
         <div class="word-container-divider"></div>
-        <h3 class="buttoned-title">EXAMPLE</h3>
+        <h3 class="content-title">EXAMPLE</h3>
       </div>
   </div>
 
   <template id="word-card-template">
-    <div class="word-card">
+    <div class="word-card text-size-content content-font">
       <img class="previous-word previous-button" src="./assets/back_icon.png" alt=&lt>
-      <p class="word-text text"></p>
-      <p id="word-position" class="position-text"></p>
+      <p class="word-text text word-content"></p>
+      <p id="word-position" class="position-text word-info"></p>
       <img class="next-word next-button" src="./assets/forward_icon.png" alt=&gt>
 
       <div class="word-container-divider"></div>
 
-      <p class="pos-text"></p>
+      <p class="pos-text word-content"></p>
 
       <div class="word-container-divider"></div>
 
       <img class="previous-definition previous-button" src="./assets/back_icon.png" alt=&lt>
-      <p class="definition-text text"></p>
-      <p id="definition-position" class="position-text"></p>
+      <p class="definition-text text word-content"></p>
+      <p id="definition-position" class="position-text word-info"></p>
       <img class="next-definition next-button" src="./assets/forward_icon.png" alt=&gt>
 
       <div class="word-container-divider"></div>
 
       <img class="previous-example previous-button" src="./assets/back_icon.png" alt=&lt>
-      <p class="example-text text"></p>
-      <p id="example-position" class="position-text"></p>
+      <p class="example-text text word-content"></p>
+      <p id="example-position" class="position-text word-info"></p>
       <img class="next-example next-button" src="./assets/forward_icon.png" alt=&gt>
     </div>
   </template>
@@ -67,7 +67,10 @@
   </body>
   <head>
     <script src="./js/index.js"></script> 
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header-struct.css">
+    <link rel="stylesheet" href="./css/content-struct.css">
+    <link rel="stylesheet" href="./css/skins.css">
   </head>
 </html>
 

@@ -1,0 +1,44 @@
+.bg-primary {
+    background-color: var(--background-colour-primary);
+}
+
+.bg-secondary {
+    background-color: var(--background-colour-secondary);
+}
+
+.header-title {
+    font-family: var(--font-label);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.header-search {
+    font-family: var(--font-label);
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.header-button {
+    font-family: var(--font-label);
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.word-title {
+    font-family: var(--font-label);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.word-card {
+    font-family: var(--font-content);
+    font-weight: 400;
+}
+
+.word-content {
+    font-size: 26px;
+}
+
+.word-info {
+    font-size: 18px;
+}
