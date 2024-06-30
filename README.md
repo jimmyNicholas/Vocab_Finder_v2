@@ -1,4 +1,4 @@
-# Vocab_Finder_v2
+# What?
  Vocab Finder is a tool to help ESL teachers quickly find information on lists of vocabulary words.
 
 # Why?
