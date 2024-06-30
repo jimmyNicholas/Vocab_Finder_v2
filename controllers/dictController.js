@@ -1,4 +1,3 @@
-//import dictApiService from "../services/dictApiService.js";
 const dictApiService = require("../services/dictApiService.js");
 
 const getWordData = async (wordString) => {

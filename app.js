@@ -1,18 +1,7 @@
-//import express from 'express';
-//import dictController from './controllers/dictController.js';
-//import path from 'path';
-//import { fileURLToPath } from 'url';
-//import bodyParser from 'body-parser';
-
 const express = require('express');
 const dictController = require('./controllers/dictController.js');
 const path = require('path');
-const { fileURLToPath } = require('url');
 const bodyParser = require('body-parser');
-
-
-//const __filename = fileURLToPath(import.meta.url);
-//const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(bodyParser.json());
