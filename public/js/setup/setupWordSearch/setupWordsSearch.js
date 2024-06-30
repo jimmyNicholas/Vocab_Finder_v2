@@ -20,6 +20,16 @@ const setRowColours = () => {
   });
 };
 
+const setupDeleteButtons = () => {
+  const deleteButtons = document.querySelectorAll('.delete-word-card');
+  deleteButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.target.parentElement.remove();
+      setRowColours();
+    });
+  });
+};
+
 const setupWordsSearch = async () => {
     const searchWordsForm = document.querySelector("#words-search-form");
     searchWordsForm.addEventListener('submit', async (e) => {
@@ -34,6 +44,7 @@ const setupWordsSearch = async () => {
                 displayWordCard(wordsInterface);
             });
             setRowColours();
+            setupDeleteButtons();
         } catch (error) {
             console.log(error);
         }    

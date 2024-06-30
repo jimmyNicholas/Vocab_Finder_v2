@@ -43,6 +43,13 @@
     font-size: 18px;
 }
 
+.delete-word-card {
+    border: 1px solid red;
+    background-color: red;
+    color: aliceblue;
+    border-radius: 20%;
+}
+
 tr {
     border-collapse: collapse;
     border-spacing: 0; 
