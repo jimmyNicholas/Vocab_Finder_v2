@@ -6,6 +6,9 @@
 
     --row-colour-A: #E1F2FB;
     --row-colour-B: #E8EBEB;
+    
+    --delete-bg-colour: #FF7F50;
+    --delete-colour: #FFFFFF;
 
     --font-label: "jost", sans-serif;
     --font-content: "arial", sans-serif;

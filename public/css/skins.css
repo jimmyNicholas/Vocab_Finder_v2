@@ -44,9 +44,8 @@
 }
 
 .delete-word-card {
-    border: 1px solid red;
-    background-color: red;
-    color: aliceblue;
+    background-color: var(--delete-bg-colour);
+    color: var(--delete-colour);
     border-radius: 20%;
 }
 
