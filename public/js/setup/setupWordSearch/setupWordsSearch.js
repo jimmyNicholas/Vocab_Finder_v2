@@ -3,6 +3,12 @@ import { displayWordCard }  from './displayWordCard.js';
 import { getWordData } from './getWordData.js';
 import { getTestWord } from './getTestWord.js';
 
+const extractFormData = (form) => {
+  const formData = new FormData(form);        
+  const formEntries = Object.fromEntries(formData);
+  return Object.values(formEntries)[0].replaceAll(', ', ',').split(',').join('+');
+};
+
 const setRowColours = () => {
   const rows = document.querySelectorAll('.word-card');
   rows.forEach((row, index) => {
@@ -18,18 +24,11 @@ const setupWordsSearch = async () => {
     const searchWordsForm = document.querySelector("#words-search-form");
     searchWordsForm.addEventListener('submit', async (e) => {
         e.preventDefault();    
-        const formData = new FormData(e.target);        
-        const formEntries = Object.fromEntries(formData);
-        const wordString = Object.values(formEntries)[0].replaceAll(', ', ',').split(',').join('+');
+        const wordString = extractFormData(e.target);
         const testingModeIsOn = document.querySelector('#test').checked; 
-        
+
         try {
-            let wordMeanings;
-            if (testingModeIsOn) {
-              wordMeanings = getTestWord();
-            } else {
-              wordMeanings = await getWordData(wordString);
-            }            
+            const wordMeanings = testingModeIsOn ? getTestWord() : await getWordData(wordString);      
             wordMeanings.forEach((wordMeaning) => {
                 const wordsInterface = constructWordsInterface(wordMeaning);
                 displayWordCard(wordsInterface);

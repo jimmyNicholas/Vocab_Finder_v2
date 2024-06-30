@@ -1,12 +1,9 @@
-const displayWordCard = (wordsInterface) => {
-    const getTemplate = (templateName) => {
-      const temp = document.querySelector(templateName);
-      return temp.content.cloneNode(true);
-    };
+import { getTemplate } from "../../helpers/domHelpers.js";
 
+const displayWordCard = (wordsInterface) => {
     //define DOM container and get word card template
     const wordContainer = document.querySelector('#word-container');
-    let wordCard = getTemplate('#word-card-template');
+    let wordCard = getTemplate('#word-card-template');  
 
     //// DISPLAY FUNCTIONS ////
     const placeHolder = '-';
@@ -28,7 +25,7 @@ const displayWordCard = (wordsInterface) => {
       displayDefinition(wordCard);
       displayExample(wordCard);
     };
-    
+
     //// DYNAMIC FUNCTIONS ////
     const setupNavButtons = (wordCard, wordsInterface, buttonSelector, dirrection) => {
       const previousWord = wordCard.querySelector(buttonSelector);
