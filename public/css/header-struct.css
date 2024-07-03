@@ -5,6 +5,10 @@
     padding: 25px 50px 25px 50px;
 }
 
+.header-title {
+    margin-bottom: 30px;
+}
+
 .header-center {
     display: grid;
     grid-column: 2 / span 1;
@@ -15,6 +19,7 @@
 .header-form {
     display: flex;
     height: 50px;
+    margin-bottom: 10px;
 }
 
 .header-img {
@@ -29,6 +34,7 @@
     border-radius: 25px;
     border: none;
     min-width: 50%;
+    gap: 10px;
 }
 
 .header-button-container {

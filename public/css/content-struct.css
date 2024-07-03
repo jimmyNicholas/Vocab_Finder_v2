@@ -1,7 +1,14 @@
+:root {
+    --content-div-width: 1.5px;
+}
 
 .content-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 3px 1fr repeat(2, 3px 1fr 8fr 1fr 1fr) 1fr;
+    grid-template-columns: 
+        1fr 2fr 1fr 1fr var(--content-div-width) 
+        1fr 
+        repeat(2, var(--content-div-width) 1fr 8fr 1fr 1fr) 
+        1fr;
 }
 
 .buttoned-title,
