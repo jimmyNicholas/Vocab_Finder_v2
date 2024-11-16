@@ -11,9 +11,9 @@
         var(--content-div-width) 
         1fr                                                     /* IPA column*/
         var(--content-div-width)
-        1fr 8fr 1fr 1fr                                         /* definition column*/
+        1fr 6fr 1fr 1fr                                         /* definition column*/
         var(--content-div-width)
-        1fr 8fr 1fr 1fr                                         /* example column*/
+        1fr 6fr 1fr 1fr                                         /* example column*/
         1fr;
 }
 

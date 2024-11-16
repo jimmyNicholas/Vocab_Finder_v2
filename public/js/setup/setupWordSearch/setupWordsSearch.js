@@ -35,7 +35,7 @@ const setupWordsSearch = async () => {
     searchWordsForm.addEventListener('submit', async (e) => {
         e.preventDefault();    
         const wordString = extractFormData(e.target);
-        const testingModeIsOn = document.querySelector('#test').checked; 
+        const testingModeIsOn =  false //document.querySelector('#test').checked; 
 
         try {
             const wordMeanings = testingModeIsOn ? getTestWord() : await getWordData(wordString);      
