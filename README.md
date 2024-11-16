@@ -1,7 +1,12 @@
 # Vocab Finder
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/demo-live-green)](https://vocabfinder.jimmynicholas.com/)
+
 ## Overview
 Vocab Finder is a specialized tool designed to streamline vocabulary research for ESL (English as a Second Language) teachers and students. It automates the process of looking up multiple words simultaneously, providing comprehensive word information from Merriam-Webster dictionary.
+
+![vocab finder screenshot](./public/assets/vocab-finder-screenshot.png)
 
 ## Problem Statement
 ESL teachers frequently need to:
