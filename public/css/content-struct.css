@@ -5,9 +5,15 @@
 .content-container {
     display: grid;
     grid-template-columns: 
-        1fr 2fr 1fr 1fr var(--content-div-width) 
-        1fr 
-        repeat(2, var(--content-div-width) 1fr 8fr 1fr 1fr) 
+        1fr 2fr 1fr 1fr                                         /* word column*/
+        var(--content-div-width) 
+        1fr                                                     /* POS column*/
+        var(--content-div-width) 
+        1fr                                                     /* IPA column*/
+        var(--content-div-width)
+        1fr 8fr 1fr 1fr                                         /* definition column*/
+        var(--content-div-width)
+        1fr 8fr 1fr 1fr                                         /* example column*/
         1fr;
 }
 

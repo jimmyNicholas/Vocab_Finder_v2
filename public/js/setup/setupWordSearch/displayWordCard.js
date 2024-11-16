@@ -20,6 +20,7 @@ const displayWordCard = (wordsInterface) => {
 
     const displayWord = (wordCard) => {
       wordCard.querySelector('.word-text').innerHTML = wordsInterface.getWordText() || placeHolder;
+      wordCard.querySelector('.phonetic-text').innerHTML = `/${wordsInterface.getWordPhonetic()}/` || placeHolder;
       wordCard.querySelector('#word-position').textContent = wordsInterface.getWordPositionText() || placeHolder;
       wordCard.querySelector('.pos-text').textContent = wordsInterface.getWordPos() || placeHolder;
       displayDefinition(wordCard);
