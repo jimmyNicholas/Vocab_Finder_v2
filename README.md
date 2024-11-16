@@ -1,15 +1,54 @@
-# What?
- Vocab Finder is a tool to help ESL teachers quickly find information on lists of vocabulary words.
+# Vocab Finder
 
-# Why?
- ESL teachers need to know their vocabulary well but even the most season professional must look up nuanced meanings. When it is one or two words, using a standard dictionary works well. However, when that list grows longer, considerable time must be spent searching, selecting, copying, pasting and formatting.
+## Overview
+Vocab Finder is a specialized tool designed to streamline vocabulary research for ESL (English as a Second Language) teachers and students. It automates the process of looking up multiple words simultaneously, providing comprehensive word information from Merriam-Webster dictionary.
 
- ESL students also benefit from having access to accurate vocabulary lists which include the type of word, definitions and examples. This information contributes to a strong foundational entry and reference point.
+## Problem Statement
+ESL teachers frequently need to:
+- Research multiple vocabulary words quickly and accurately
+- Create comprehensive vocabulary lists for students
+- Prepare materials for test preparation
+- Find detailed word information including definitions, parts of speech, and usage examples
 
- This site was created while teaching an intensive English language course. This course was test focused (reading, writing, speaking, listening) and the course book was not linked to the tests. This meant that students may encounter vocabulary words they have never seen before. To assist them in these practice tests, I would prepare lists of the words they may not know. As the lists were usually around 30 words long, creating them was time consuming.
- 
-# How?
- Add your list of words into the search bar with a comma between each one and hit enter.
- Your words will be searched using the merriam-webster dictionary.
- Using the arrows in each column, find the specific word, definition and example.
- When you have found your list, hit print.
+Manual dictionary searches become time-consuming and inefficient when dealing with multiple words, especially when preparing for intensive language courses or test preparation classes.
+
+## Benefits
+### For Teachers
+- Save time on vocabulary research
+- Access accurate, consistent word information
+- Quickly prepare vocabulary materials for lessons
+- Generate properly formatted word lists efficiently
+
+### For Students
+- Access comprehensive vocabulary references
+- Study from accurate, well-formatted word lists
+- Better prepare for tests and examinations
+- Build stronger vocabulary foundations
+
+## Features
+- Bulk word lookup capability
+- Integration with Merriam-Webster dictionary
+- Sortable results by different categories
+- Print-friendly output
+- Column sorting functionality
+
+## How to Use
+1. **Input**: Enter your list of words in the search bar, separated by commas
+2. **Search**: Click enter to initiate the search
+3. **Refine**: Use column arrows to sort and find specific information
+4. **Select**: Choose the most relevant definitions and examples
+5. **Print**: Generate a printer-friendly version of your vocabulary list
+
+## Technical Details
+- Data Source: Merriam-Webster Dictionary API
+- Output Format: Printer-friendly layout
+- Sorting: Available for all columns
+
+## Future Improvements
+- Export options (PDF, Word, Excel)
+- Custom formatting templates
+- Saved word lists
+- Multiple dictionary source options
+
+## Contact
+[Your contact information or contribution guidelines here]
