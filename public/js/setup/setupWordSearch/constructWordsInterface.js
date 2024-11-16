@@ -154,6 +154,14 @@ const constructIndexNav = (array) => {
       return words.getPositionText();
     }
   
+    const getWordPhonetic = () => {
+      const word = words.getItem();
+      if (word.hwi && word.hwi.prs && word.hwi.prs[0]) {
+        return word.hwi.prs[0].ipa || '-';
+      }
+      return '-';
+    };
+
     //// definition functions ////
     const nextDefinition = () => {
       sseqs.increaseIndex();
@@ -199,7 +207,8 @@ const constructIndexNav = (array) => {
       getWordText,
       getWordPos,
       getWordPositionText,
-  
+      getWordPhonetic,
+
       nextDefinition,
       previousDefinition,
       getDefinition,

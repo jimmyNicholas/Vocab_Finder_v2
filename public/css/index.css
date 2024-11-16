@@ -1,7 +1,11 @@
-
+/* 
 .content-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 3px 1fr repeat(2, 3px 1fr 8fr 1fr 1fr);
+    grid-template-columns: 
+        1fr 2fr 1fr 1fr 3px 
+        1fr 3px 
+        1fr 3px
+        1fr repeat(2, 3px 1fr 8fr 1fr 1fr 1fr)
 }
 
 .buttoned-title {
@@ -52,4 +56,4 @@
     width: 40px;
     height: 40px;
 }
-
+ */
